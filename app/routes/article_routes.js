@@ -29,6 +29,7 @@ router.get('/articles/:id', (req, res, next) => {
 router.post('/articles', (req, res, next) => {
   Article.create(req.body.article)
     .then(article => {
+      console.log(article)
       res.status(201).json({ article: article.toObject() })
     })
     .catch(next)
