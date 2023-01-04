@@ -11,7 +11,7 @@ const router = express.Router()
 router.get('/articles', (req, res, next) => {
   Article.find()
     .then(articles => {
-      return articles.map(article => article.toObject())
+      return articles.map(article => article.toObject()).reverse()
     })
     .then(articles => res.status(200).json({ articles: articles }))
     .catch(next)

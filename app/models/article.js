@@ -1,17 +1,6 @@
 const mongoose = require('mongoose')
 
 const articleSchema = new mongoose.Schema({
-  //
-  palletSpotPerShelf: {
-    type: Number,
-    required: false,
-    default: 2
-  },
-  variableBinShelfCount: {
-    type: String,
-    required: true
-  },
-  //
   title: {
     type: String,
     required: true
@@ -167,3 +156,32 @@ const articleSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('Article', articleSchema)
+// product: {
+//   type: String,
+//   required: false,
+//   default: 2
+// },
+// source: {
+//   String: String,
+//   required: false,
+//   default: "dn"
+// }
+// unitQuanitiy: {
+//   type: String,
+//   required: true
+// },
+// palletArea: {
+//   type: Number,
+//   required: false,
+//   default: 2
+// },
+// // ////////////
+// palletSpotPerShelf: {
+//   type: Number,
+//   required: false,
+//   default: 2
+// },
+// variableBinShelfCount: {
+//   type: String,
+//   required: true
+// },
